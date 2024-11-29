@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bentham&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Playwrite+CU:wght@100..400&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(198, 217, 237);
+}
+
+.container {
+    width: 800px;
+    height: 380px;
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+}
+
+#days {
+    margin: auto 0;
+}
+
+.day {
+    color: rgb(109, 109, 110);
+    font-size: 35px;
+    font-family: "Bentham", serif;
+}
+.today {
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+
+
+.clock {
+    text-align: center;
+    margin: auto;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+.blog {
+    position: relative;
+    width: 420px;
+    height: 100px;
+    /* background: black; */
+    background: linear-gradient(0deg, #000000b3, #3f3f3fb9);
+    border-radius: 15px;
+}
+
+.blog::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg, rgb(255, 0, 212), rgb(87, 87, 247), rgb(11, 202, 11), rgb(222, 222, 11), rgb(255, 77, 0));
+    width: calc(100% + 4px);
+    background-size: 400%;
+    height: calc(100% + 4px );
+    z-index: -1;
+    animation: animate 23s linear infinite;
+    border-radius: 14px;
+    filter: blur(35px);
+}
+
+.blog::after {
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+span {
+    margin: auto;
+    font-size: 80px;
+    font-family: "Inter", sans-serif;
+    color: rgb(255, 0, 0);
+}
+
+/* 
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nurbolot2006/homework.git
+git push -u origin main
+*/
